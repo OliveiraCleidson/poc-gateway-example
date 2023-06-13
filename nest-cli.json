@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/shuri-contracts/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/shuri-contracts/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/shuri-contracts",
+  "projects": {
+    "shuri-contracts": {
+      "type": "application",
+      "root": "apps/shuri-contracts",
+      "entryFile": "main",
+      "sourceRoot": "apps/shuri-contracts/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/shuri-contracts/tsconfig.app.json"
+      }
+    },
+    "other1": {
+      "type": "application",
+      "root": "apps/other1",
+      "entryFile": "main",
+      "sourceRoot": "apps/other1/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/other1/tsconfig.app.json"
+      }
+    },
+    "other2": {
+      "type": "application",
+      "root": "apps/other2",
+      "entryFile": "main",
+      "sourceRoot": "apps/other2/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/other2/tsconfig.app.json"
+      }
+    }
+  }
+}
